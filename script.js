@@ -24,14 +24,14 @@ function Submit()
         document.getElementById("month-label").style.color = "red";
         document.getElementById("valid-month").innerHTML="Must be a valid month";
     }
-    if(birthYear>2023||birthYear<1900)
+    if(birthYear>2023||birthYear<1790)
     {
         document.getElementById("year").style.borderColor = "red";
         document.getElementById("year-label").style.color = "red";
         document.getElementById("valid-year").innerHTML="Must be a valid year";
     }
 
-    else if(birthYear<=2023 && birthMonth<=12 && birthDay<=31)
+    else if( (birthYear<=2023 &&birthYear>=1790) && ( birthMonth<=12 && birthMonth>=1)&&(birthDay<=31 && birthDay>=1 ))
     {
         if(birthDay > currentDay)
         {
